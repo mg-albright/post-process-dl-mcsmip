@@ -3,7 +3,7 @@ import pathlib
 import xarray as xr
 import numpy as np
 
-model = str(sys.argv[1])
+model = "OBS"  # update model name or loop through all
 thresh = 0.03
 
 data_dir = pathlib.Path(
