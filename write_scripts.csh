@@ -23,9 +23,7 @@ mkdir -p ${TMPDIR}
 module load conda
 conda activate npl-2024a
 
-python ${working_path}/split_tracks.py ${model} 
 python ${working_path}/mcs_filtering_from_split_compressed_serial.py ${model} tracks_mintime4_minsize1_overlap50-99_thresh0.03_radius0.0_updated_part_${part}.txt ${part}
-python ${working_path}/post-process.py ${model} 
 EOF
 qsub -V mcs_filtering_part_${part}.csh 
 end
